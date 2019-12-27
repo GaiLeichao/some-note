@@ -1,0 +1,43 @@
+public static void main(String[] args) {
+			dealTime("2019-11-26 16:50:31","2019-11-29 15:56:28");
+		}
+		private static String dealTime(String beginTime,String endTime){
+
+			SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
+			int y1 = Integer.parseInt(beginTime.split("-")[0]);
+			int y2 = Integer.parseInt(endTime.split("-")[0]);
+			int year = y2-y1;
+			Date d1;
+			Date d2;
+			String dealTime = "" ;
+			try {
+				d1 = sdf.parse(beginTime);
+				d2=sdf.parse(endTime);
+				long secBetween=((d2.getTime()-d1.getTime())/1000)%60;
+				long minBetween=((d2.getTime()-d1.getTime())/(60*1000))%60;
+				long houBetween=((d2.getTime()-d1.getTime())/(60*60*1000))%24;
+				long daysBetween=((d2.getTime()-d1.getTime())/(60*60*24*1000))%365;
+				if(year!=0){
+					dealTime += year+"年";
+				}
+				if(daysBetween!=0){
+					
+					dealTime += daysBetween+"天";
+				}
+				if(houBetween!=0){
+					
+					dealTime += houBetween+"时";
+				}
+				if(minBetween!=0){
+					
+					dealTime += minBetween+"分";
+				}
+					dealTime += secBetween+"秒";
+				
+				System.out.println(dealTime);
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+			return dealTime;
+			
+		}
