@@ -1,0 +1,10 @@
+git add     -------添加到缓存区
+git commit  -------添加到版本库
+git log    ------查看修改记录
+git status ------工作目录与版本库对照
+git reset --hard HEAD^  -----回退上一个版本
+git reflog ----查看历史修改记录
+
+git diff   -----版本对比看修改过什么内容
+
+git restore   ------撤销修改
