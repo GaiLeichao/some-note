@@ -1,0 +1,7 @@
+netstat -ano  显示所有进程
+
+netstat -ano |findstr '2908'   根据端口号筛选进程
+
+tasklist | findstr PID  根据pid查看进程名称
+
+taskkill /pid  PID  /f    根据pid杀进程
