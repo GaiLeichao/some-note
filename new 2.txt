@@ -1,6 +1,9 @@
-public static void main(String[] args) {
-		AutoNoticeOverTimeTasks test = new AutoNoticeOverTimeTasks();
-		AutoNoticeOverTimeTasks.MyTimertask test2= test.new MyTimertask();
-		Thread thread = new Thread(test2);
-		thread.start();
-	}
+mvn install:install-file -Dfile=D:/Program Files/maven/repository/com/oracle/ojdbc6/ojdbc6-11.2.0.4.jar -DgroupId=com.oracle -DartifactId=ojdbc6 -Dversion=11.2.0.4 -Dpackaging=jar
+
+
+
+
+
+
+
+mvn install:install-file -DgroupId=com.alibaba -DartifactId=jd-openapi-sdk -Dversion=2.0 -Dfile=F:/Users/gai/Downloads/druid-1.1.0.jar -Dpackaging=jar -DgeneratePom=true
